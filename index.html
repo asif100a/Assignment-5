@@ -121,7 +121,7 @@
         </div>
 
         <!-- --------------================[Ticket & Sits & Amount-counting Section]===============------------- -->
-        <div class="mt-32 bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[4em]">
+        <div class="mt-32 bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[4em] pb-16">
             <!-- --------------------[Ticket Section]------------------- -->
             <section class="pt-24">
                 <div class="text-center">
@@ -134,7 +134,8 @@
                 </div>
 
                 <!-- --------[Ticket Center]-------- -->
-                <div class="bg-white w-[75%] h-fit mx-auto rounded-3xl flex flex-col lg:flex-row lg:justify-around items-center mt-16">
+                <div
+                    class="bg-white w-[75%] h-fit mx-auto rounded-3xl flex flex-col lg:flex-row lg:justify-around items-center mt-16">
                     <div class="space-y-8">
                         <div>
                             <!-- [Ticket Header] -->
@@ -175,7 +176,8 @@
 
                             <hr>
 
-                            <div class="inter text-base font-medium flex flex-col gap-3 lg:gap-0 lg:flex-row lg:justify-evenly">
+                            <div
+                                class="inter text-base font-medium flex flex-col gap-3 lg:gap-0 lg:flex-row lg:justify-evenly">
                                 <button class="btn">Boarding Point - Laxmipur</button>
                                 <button class="btn">Dropping Point - Bogura</button>
                                 <button class="btn">Est. Time - 11 Hour</button>
@@ -200,27 +202,27 @@
             </section>
 
             <!-- --------------------[Sits & Amount Section]------------------- -->
-            <section class="mt-8 bg-white w-[75%] mx-auto">
+            <section class="mt-8 bg-white w-[75%] mx-auto flex justify-around rounded-3xl pb-8 mb-20">
                 <!-- ======[Available Sits Section]====== -->
-                <div>
-                    <h4>Select Your Seat</h4>
+                <div class="mt-6">
+                    <h4 class="text-lg font-semibold raleway">Select Your Seat</h4>
 
                     <hr class="mt-6">
 
-                    <div class="flex mt-4 mb-4">
+                    <div class="flex justify-between mt-4 mb-4">
                         <div class="flex gap-2">
                             <img src="images/seat-gray.png" alt="seat-green">
-                            <p>Available</p>
+                            <p class="inter text-lg font-medium text-[#03071280]">Available</p>
                         </div>
                         <div class="flex gap-2">
                             <img src="images/seat-green-filled.png" alt="seat-green-filled">
-                            <p>Selected</p>
+                            <p class="inter text-lg font-medium text-[#1DD100]">Selected</p>
                         </div>
                     </div>
 
                     <hr>
 
-                    <div>
+                    <div class="flex justify-end mt-4 mr-4">
                         <button class="btn bg-gray-300 px-6"><img src="images/wheel.svg" alt="wheel"></button>
                     </div>
 
@@ -306,56 +308,74 @@
 
                 <!-- ========[Devider Line]======= -->
                 <div>
-                    <img src="images/Line 1.svg" alt="">
+                    <img src="images/Line 1.svg" alt="" class="h-[52rem] mt-8">
                 </div>
 
                 <!-- =========[Selected Sits]========= -->
-                <div>
-                    <h4>Select Your Seat</h4>
+                <div class="mt-6">
+                    <h4 class="text-lg font-semibold raleway">Select Your Seat</h4>
 
-                    <hr>
+                    <hr class="mt-6">
 
                     <!-- [Price Counter] -->
-                    <div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Seat <span id=""></span></th>
-                                    <th>Class</th>
-                                    <th>Price</th>
-                                </tr>
-                                <tr>
-                                    <th colspan="3"><img src="images/Line 4.svg" alt=""></th>
-                                </tr>
-                            </thead>
+                    <div class="bg-[#F7F8F8] rounded-xl mt-7 pt-4 pb-4">
+                        <div class="mt-6">
+                            <ul class="flex justify-around inter font-semibold">
+                                <li>Seat <span id=""></span></li>
+                                <li>Class</li>
+                                <li>Price</li>
+                            </ul>
 
+                            <div class="mt-4">
+                                <img src="images/Line 4.svg" alt="">
+                            </div>
+
+                            <hr class="mt-4 mb-4">
                             
+                            <div class="flex justify-between mx-12 inter font-semibold">
+                                <p>Total Price</p>
+                                <p>BDT <span id=""> </span></p>
+                            </div>
 
-                            <tbody>
-                                <tr>
+                        </div>
 
-                                </tr>
-                            </tbody>
+                        <div class="join border-2 bg-white px-1 py-1 mt-4 ml-12">
+                            <input class="input border-r-0 w-60 join-item" placeholder="Have any copupon?" />
+                            <button class="btn w-16 rounded-2xl bg-[#1DD100] text-white inter">Apply</button>
+                        </div>
 
-                        
+                        <div class="flex justify-between mx-12 inter font-semibold mt-4 pb-4">
+                            <p>Grand Total</p>
+                            <p>BDT <span id=""></span></p>
+                        </div>
 
-                            <tfoot>
-                                <tr>
-                                    <td colspan="3"><hr></td>
-                                </tr>
+                        <!--  -->
+                        <!-- <div>
 
-                                <tr>
-                                    <td><strong>Total Price</strong></td>
-                                    <td></td>
-                                    <td><strong>BDT <span id=""></span> </strong></td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                        </div> -->
+                       
+                    </div>
 
-                        <div class="join">
-                            <input class="input input-bordered join-item" placeholder="Have any copupon?"/>
-                            <button class="btn join-item rounded-xl">Subscribe</button>
-                          </div>
+
+                     <!-- [Passanger Form] -->
+                     <div class="mt-8">
+                        <h6 class="text-base font-semibold inter mb-3">Passenger Name*</h6>
+                        <input type="text" name="" id="" class="border-2 w-[25.5em] h-14 rounded-xl pl-8" placeholder="Enter your name">
+
+                        <h6 class="text-base font-semibold inter mb-3 mt-4">Phone Number*</h6>
+                        <input type="number" name="" id="" class="border-2 w-[25.5em] h-14 rounded-xl pl-8" placeholder="Enter your phone number">
+
+                        <h6 class="text-base font-semibold inter mb-3 mt-4">Email ID</h6>
+                        <input type="email" name="" id="" class="border-2 w-[25.5em] h-14 rounded-xl pl-8" placeholder="Enter your email id">
+
+                        <div class="mt-4">
+                            <button class="btn w-[29em] bg-[#1DD100] text-white inter">Next</button>
+                        </div>
+
+                        <ul class="text-[#03071299] font-normal text-base inter flex justify-evenly mt-4">
+                            <li><a href="">Terms and Conditions</a></li>
+                            <li><a href="">Cancellation Policy</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
