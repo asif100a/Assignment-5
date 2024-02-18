@@ -79,9 +79,9 @@
     <main class="mt-36">
         <div>
             <h1 class="text-4xl font-bold raleway text-center">Best offers for you</h1>
-            <div class="mt-16 flex justify-center gap-8">
+            <div class="mt-16 flex flex-col lg:flex-row justify-center gap-8">
                 <!-- [15% discount] -->
-                <div class="bg-amber-400 w-[32rem] h-auto flex justify-evenly items-center rounded-3xl">
+                <div class="bg-amber-400 w-full lg:w-[32rem] h-auto flex justify-evenly items-center rounded-3xl">
                     <div class="inter flex flex-col gap-3">
                         <h1 class="text-4xl font-extrabold">15% OFF</h1>
                         <p class="text-lg font-semibold">on your next purchase</p>
@@ -97,7 +97,7 @@
                 </div>
 
                 <!-- [20% discount] -->
-                <div class="bg-[#F78C9C] w-[32rem] h-auto flex justify-evenly items-center rounded-3xl">
+                <div class="bg-[#F78C9C] w-full lg:w-[32rem] h-auto flex justify-evenly items-center rounded-3xl">
                     <div class="inter flex flex-col gap-3">
                         <h1 class="text-4xl font-extrabold">20% OFF</h1>
                         <p class="text-lg font-semibold">on your next purchase</p>
@@ -134,12 +134,12 @@
                 </div>
 
                 <!-- --------[Ticket Center]-------- -->
-                <div class="bg-white w-[75%] h-fit mx-auto rounded-3xl flex justify-around items-center mt-16">
+                <div class="bg-white w-[75%] h-fit mx-auto rounded-3xl flex flex-col lg:flex-row lg:justify-around items-center mt-16">
                     <div class="space-y-8">
                         <div>
                             <!-- [Ticket Header] -->
-                            <div class="flex gap-24">
-                                <div class="flex gap-3">
+                            <div class="flex flex-col lg:flex-row gap-8 lg:gap-24 mt-4 lg:mt-0">
+                                <div class="flex flex-col lg:flex-row gap-3">
                                     <div>
                                         <img src="images/bus-logo.png" alt="Bus">
                                     </div>
@@ -160,7 +160,7 @@
 
                         <!-- [Text-Area] -->
                         <div
-                            class="raleway text-lg font-semibold bg-[#F7F8F8] w-[36em] flex flex-col space-y-4 py-4 rounded-2xl">
+                            class="raleway text-lg font-semibold bg-[#F7F8F8] w-full lg:w-[36em] flex flex-col space-y-4 py-4 rounded-2xl">
                             <div class="flex justify-between px-8">
                                 <p class="text-[#03071299]">Route</p>
                                 <p>Dhaka - Sylhet</p>
@@ -175,7 +175,7 @@
 
                             <hr>
 
-                            <div class="inter text-base font-medium flex justify-evenly">
+                            <div class="inter text-base font-medium flex flex-col gap-3 lg:gap-0 lg:flex-row lg:justify-evenly">
                                 <button class="btn">Boarding Point - Laxmipur</button>
                                 <button class="btn">Dropping Point - Bogura</button>
                                 <button class="btn">Est. Time - 11 Hour</button>
@@ -184,8 +184,8 @@
                     </div>
 
                     <!-- [Devider Image] -->
-                    <div>
-                        <img src="images/info-devider.png" alt="info-devider">
+                    <div class="">
+                        <img src="images/info-devider.png" alt="info-devider" class="h-48 lg:h-full">
                     </div>
 
                     <!-- [Ticket Price] -->
@@ -201,7 +201,9 @@
 
             <!-- --------------------[Sits & Amount Section]------------------- -->
             <section>
+                <div>
 
+                </div>
             </section>
         </div>
     </main>
