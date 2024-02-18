@@ -12,3 +12,25 @@
 .inter{
     font-family: "Inter", sans-serif;
 }
+
+
+/* Manually Style */
+tr > th{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px;
+}
+tr > td{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+}
+tr > td > .btn{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+tr > td > strong{
+    padding-left: 24px;
+    padding-right: 24px;
+}
