@@ -34,3 +34,25 @@ tr > td > strong{
     padding-left: 24px;
     padding-right: 24px;
 }
+
+@media screen and (max-width: 600px) {
+    tr > th{
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+    }
+    tr > td{
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 6px;
+    }
+    tr > td > .btn{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    tr > td > strong{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
