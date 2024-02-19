@@ -27,7 +27,7 @@ for (const btn of ticketBtns) {
 
         // Decrement the left Seats
         const seatsLeft = document.getElementById('seats-left');
-        seatsLeft.innerText --;
+        seatsLeft.innerText--;
         // const decrement = 
 
 
@@ -37,7 +37,7 @@ for (const btn of ticketBtns) {
 
         const showClass = document.createElement('li');
         showClass.innerText = 'Economy';
-        
+
         const showPrice = document.createElement('li');
         showPrice.innerText = '550';
 
@@ -46,33 +46,73 @@ for (const btn of ticketBtns) {
         ul.appendChild(showBtnSeat);
         ul.appendChild(showClass);
         ul.appendChild(showPrice);
-        
+
         ul.classList.add('flex');
         ul.classList.add('justify-around');
-        
+
         // Append the ul in the Show Box
         const showSelectedSeats = document.getElementById('show-selected-seat');
         showSelectedSeats.appendChild(ul);
 
-        
+
         // Calculate the Total price
         const totalPriceString = showPrice;
         let totalPrice = parseInt(totalPriceString.innerText);
         let sumOfPrice = sum += totalPrice;
-        
+
         // Add Total price to the Box
-        const totalTicketPrice = document.getElementById('total-price'); 
+        const totalTicketPrice = document.getElementById('total-price');
         totalTicketPrice.innerText = sumOfPrice;
+
+
+        // Calculate the Grand Total
+        const grandTotal = document.getElementById('grand-total');
+        grandTotal.innerText = sumOfPrice;
+
+
+        // Use of Coupon code in the Grand Total
+        
+        const applyCoupon = document.getElementById('apply-coupon');
+        applyCoupon.addEventListener('click', function() {
+            
+            const couponBooking = document.getElementById('coupon-booking');
+            let inputValue = couponBooking.value;
+            
+            // 15% discount to grand total
+            if (inputValue === 'NEW15') {
+                const grandTotalPrice = parseInt(grandTotal.innerText);
+                const discount = grandTotalPrice * 0.15;
+                let grandPrice = grandTotalPrice - discount;
+                grandTotal.innerText = grandPrice;
+            }
+            else if(inputValue === 'Couple 20') {
+                const grandTotalPrice = parseInt(grandTotal.innerText);
+                const discount = grandTotalPrice * 0.20;
+                let grandPrice = grandTotalPrice - discount;
+                grandTotal.innerText = grandPrice;
+            }
+        });
+        
+
     });
 };
 
 
 
-// 
+// Coupon Booking in the Input field
+// couponBooking.value = 99;
+
+// function getDiscount() {
+
+//     const grandTotalPrice = happyBus(e);
+//     const resetGrandTotal = document.getElementById('grand-total');
+//     console.log(resetGrandTotal)
+// };
 
 
 
-// console.log(showSelectedSeats)
+
+
 
 
 
