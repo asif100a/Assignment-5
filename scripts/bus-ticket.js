@@ -17,11 +17,17 @@ function getTicketById(getTicket) {
 
 // Change The backgroun of btn & get specific btn
 const ticketBtns = document.getElementsByClassName('ticket-btn');
+// let available = 0;
+let count = 0;
 let clickedBtn = 0;
 let sum = 0;
 for (const btn of ticketBtns) {
 
+   
+
     btn.addEventListener('click', function (e) {
+
+
         btn.classList.add('bg-green-400', 'text-white');
 
         const specificBtn = e.target.id;
@@ -29,7 +35,13 @@ for (const btn of ticketBtns) {
         // Decrement the left Seats
         const seatsLeft = document.getElementById('seats-left');
         seatsLeft.innerText--;
-        // const decrement = 
+
+
+        // Seat-Counting in the box
+        const countSeat = document.getElementById('count-seat');
+        count ++;
+        countSeat.innerText = count;
+        countSeat.classList.add('px-3', 'rounded-lg');
 
 
         // Create elements to show in the box
@@ -75,6 +87,8 @@ for (const btn of ticketBtns) {
             clickedBtn++;
         }
 
+        
+
         if(clickedBtn >= 4){  
 
             // Use of Coupon code in the Grand Total
@@ -107,22 +121,48 @@ for (const btn of ticketBtns) {
                 }
             });
         }
+
+
+        // Enter to success
+        const next = document.getElementById('next');
+        next.addEventListener('click', function() {
+            const success = document.getElementById('success');
+            success.classList.remove('hidden');
+
+            if(success) {
+                success.scrollIntoView({behavior : 'smooth'})
+            }
+        });
+
+        const phoneNumber = document.getElementById('phone');
+        phoneNumber.addEventListener('keydown', function(e) {
+
+            // const phoneUndefined = e.key === 'string';
+            // console.log(phoneUndefined)
+            
+        });
+
+        if(clickedBtn > 0 ) {
+            const disabledBtn = document.getElementById('next-container');
+            const enable = disabledBtn.children[0];
+            enable.classList.remove('btn-disable');
+        }
+        // console.log(phoneUndefined);
+        // console.log(e.key)
+
         
 
     });
+
+    // available++;
+    // if(available === 4){
+    //     break;
+    // }
 };
 
 
 
-// Coupon Booking in the Input field
-// couponBooking.value = 99;
 
-// function getDiscount() {
-
-//     const grandTotalPrice = happyBus(e);
-//     const resetGrandTotal = document.getElementById('grand-total');
-//     console.log(resetGrandTotal)
-// };
 
 
 

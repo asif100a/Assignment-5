@@ -56,3 +56,11 @@ tr > td > strong{
         padding-right: 24px;
     }
 }
+
+
+.btn-disable{
+    opacity: 0.2;
+    background-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+}
