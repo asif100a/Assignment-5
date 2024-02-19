@@ -17,15 +17,18 @@ function getTicketById(getTicket) {
 
 // Change The backgroun of btn & get specific btn
 const ticketBtns = document.getElementsByClassName('ticket-btn');
+let sum = 0;
 for (const btn of ticketBtns) {
 
     btn.addEventListener('click', function (e) {
         btn.classList.add('bg-green-400', 'text-white');
 
         const specificBtn = e.target.id;
-        // console.log(specificBtn);
 
-        // return specificBtn;
+        // Decrement the left Seats
+        const seatsLeft = document.getElementById('seats-left');
+        seatsLeft.innerText --;
+        // const decrement = 
 
 
         // Create elements to show in the box
@@ -51,7 +54,15 @@ for (const btn of ticketBtns) {
         const showSelectedSeats = document.getElementById('show-selected-seat');
         showSelectedSeats.appendChild(ul);
 
-
+        
+        // Calculate the Total price
+        const totalPriceString = showPrice;
+        let totalPrice = parseInt(totalPriceString.innerText);
+        let sumOfPrice = sum += totalPrice;
+        
+        // Add Total price to the Box
+        const totalTicketPrice = document.getElementById('total-price'); 
+        totalTicketPrice.innerText = sumOfPrice;
     });
 };
 
