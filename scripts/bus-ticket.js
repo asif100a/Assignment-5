@@ -17,6 +17,7 @@ function getTicketById(getTicket) {
 
 // Change The backgroun of btn & get specific btn
 const ticketBtns = document.getElementsByClassName('ticket-btn');
+let clickedBtn = 0;
 let sum = 0;
 for (const btn of ticketBtns) {
 
@@ -69,29 +70,43 @@ for (const btn of ticketBtns) {
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = sumOfPrice;
 
+        if(btn && !btn.disabled) {
+            btn.disabled = false;
+            clickedBtn++;
+        }
 
-        // Use of Coupon code in the Grand Total
-        
-        const applyCoupon = document.getElementById('apply-coupon');
-        applyCoupon.addEventListener('click', function() {
+        if(clickedBtn >= 4){  
+
+            // Use of Coupon code in the Grand Total
+            const applyCoupon = document.getElementById('apply-coupon');
+            applyCoupon.addEventListener('click', function() {
             
-            const couponBooking = document.getElementById('coupon-booking');
-            let inputValue = couponBooking.value;
-            
-            // 15% discount to grand total
-            if (inputValue === 'NEW15') {
-                const grandTotalPrice = parseInt(grandTotal.innerText);
-                const discount = grandTotalPrice * 0.15;
-                let grandPrice = grandTotalPrice - discount;
-                grandTotal.innerText = grandPrice;
-            }
-            else if(inputValue === 'Couple 20') {
-                const grandTotalPrice = parseInt(grandTotal.innerText);
-                const discount = grandTotalPrice * 0.20;
-                let grandPrice = grandTotalPrice - discount;
-                grandTotal.innerText = grandPrice;
-            }
-        });
+                const couponBooking = document.getElementById('coupon-booking');
+                let inputValue = couponBooking.value;
+                
+                // 15% discount to grand total
+                if (inputValue === 'NEW15') {
+                    const grandTotalPrice = parseInt(grandTotal.innerText);
+                    const discount = grandTotalPrice * 0.15;
+                    let grandPrice = grandTotalPrice - discount;
+                    grandTotal.innerText = grandPrice;
+                    
+                    // Hide the input field After gaining
+                    const hideInput = document.getElementById('to-hide-input');
+                    hideInput.classList.add('hidden');
+                }
+                else if(inputValue === 'Couple 20') {
+                    const grandTotalPrice = parseInt(grandTotal.innerText);
+                    const discount = grandTotalPrice * 0.20;
+                    let grandPrice = grandTotalPrice - discount;
+                    grandTotal.innerText = grandPrice;
+                    
+                    // Hide the input field After gaining
+                    const hideInput = document.getElementById('to-hide-input');
+                    hideInput.classList.add('hidden');
+                }
+            });
+        }
         
 
     });
