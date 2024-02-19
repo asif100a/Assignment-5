@@ -1,12 +1,5 @@
 // // 
-// const pParibahan = document.getElementById('p-paribahan');
-// pParibahan.addEventListener('click', function(){
-//     console.log('Present');
-// });
-
 // 
-// const buyTicket = document.getElementById('buy-ticket');
-
 // Scroll to get Ticket
 function getTicketById(getTicket) {
     const pParibahan = document.getElementById(getTicket);
@@ -147,41 +140,13 @@ for (const btn of ticketBtns) {
             const enable = disabledBtn.children[0];
             enable.classList.remove('btn-disable');
         }
-        // console.log(phoneUndefined);
-        // console.log(e.key)
+        
 
+        
         
 
     });
 
-    // available++;
-    // if(available === 4){
-    //     break;
-    // }
+    
 };
 
-
-
-
-
-
-
-
-
-
-
-
-// function getTicketButton() {
-//     const ticketBtns = document.getElementsByClassName('ticket-btn');
-//     console.log(ticketBtns)
-
-//     for (const btn of ticketBtns) {
-//         console.log(btn);
-//     }
-// };
-
-
-// function setButtonColor(e) {
-//     const btnColor = getElementById(e);
-//     btnColor.classList.add('bg-green-400', 'text-white');
-// };
